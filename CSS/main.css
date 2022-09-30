@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #8A5844;
+  height: 100vh;
+  /*max-width: 100vh;*/
+  padding: 0;
+  margin: 0;
+}
+
+/* Start Header */
+header {
+  height: 65px;
+  padding: 0 20px;
+  background-color: #D37A5D;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+h1 {
+  color: #D37A5D;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  color: #8A5844;
+  font-weight: bold;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .links {
+  position: relative;
+}
+
+header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+header .links .icon span {
+  background-color: #8A5844;
+  margin-bottom: 5px;
+  height: 2px;
+}
+
+header .links .icon span:first-child {
+  width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: var(--main-duration);
+}
+
+header .links .icon span:last-child {
+  width: 100%;
+}
+
+header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #776e6e;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+
+header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #776e6e transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+header .links:hover ul {
+  display: block;
+}
+
+header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #ddd;
+  transition: var(--main-duration);
+}
+
+header .links ul li a:hover {
+  padding-left: 25px;
+}
+
+header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* End Header */
+
+/* start insert */
+
+.insert-box {
+  width: 700px;
+  height: 930px;
+  padding: 40px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(56, 53, 53, 0.577);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.insert-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.insert-box .user-box {
+  position: relative;
+}
+
+.insert-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.insert-box .user-box input:focus~label,
+.insert-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #ece4de;
+  font-size: 12px;
+}
+
+.insert-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #8A5844;
+  background-color: #D37A5D;
+  font-size: 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s;
+  /* margin-top: 40px; */
+  margin-bottom: 60px;
+  letter-spacing: 4px;
+  border: none;
+  outline: none;
+}
+
+form button:hover {
+  background-color: #864833;
+  color: #fff;
+  box-shadow: 0 0 5px #864833,
+    0 0 25px #864833,
+    0 0 50px #864833,
+    0 0 100px #864833;
+  cursor: pointer;
+}
+
+/*       Login Box          */
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #864833;
+  font-size: 12px;
+}
+
+.login-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ddd;
+  background-color: #864833;
+  border-radius: 30px;
+  font-size: 16px;
+  -webkit-text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: 1px solid #5e3c1d;
+
+}
+
+form button:hover {
+  background-color: #864833;
+  color: #ddd;
+  box-shadow: 0 0 5px #864833,
+    0 0 25px #864833,
+    0 0 50px #864833,
+    0 0 100px #864833;
+  cursor: pointer;
+}
+
+/*==================== Cards ====================*/
+img {
+  text-align: center;
+  height: 170px;
+  width: 300px;
+  border-radius: 10%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 5px;
+  padding: 5rem;
+  margin: 1.5rem;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info p {
+  font-size: 1rem;
+}
+
+.portfolio {
+  display: grid;
+  margin-top: -7rem;
+}
+
+.p-card {
+  width: 400px;
+  height: 400px;
+  padding: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  display: grid;
+  background-color: rgba(221, 152, 130, 0.3);
+  padding: 1.7rem;
+  border-radius: 7%;
+  transition: .7s ease;
+}
+
+.p-card:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  display: inline-block;
+  background-color: #5e3c1d;
+  color: #b87f3e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  color: #96775b;
+}
+
+
+/*    Media Query   */
+@media screen and (min-width: 768px) and (max-width:1366px) {
+  .insert-box {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+  }
+
+  .p-card {
+    height: 470px;
+  }
+}
